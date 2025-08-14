@@ -23,7 +23,7 @@ export default function Home() {
 }
 
 function AuthenticatedView() {
-  // const messages = useQuery(api.messages.getForCurrentUser)
+  const messages = useQuery(api.messages.getForCurrentUser)
 
   return (
     <div className="flex flex-col items-center gap-6 mt-8 w-full max-w-lg">
@@ -32,7 +32,7 @@ function AuthenticatedView() {
       Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.
       
       
-      {/* Authenticated content: {messages?.length ?? 0} */}
+      Authenticated content: {messages?.length ?? 0}
       </div>
 
       <Card className="w-full">
@@ -60,6 +60,14 @@ function UnauthenticatedView() {
         </CardHeader>
         <CardContent>
           <p className="text-gray-600 mb-6">
+
+    
+      <div className="bg-white shadow p-6 rounded-lg text-lg text-gray-700 w-full">
+      Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.
+      
+      
+      {/* Authenticated content: {messages?.length ?? 0} */}
+      </div>
             Sign up or log in to book your clothing alterations and track your orders.
           </p>
           <SignInButton mode="modal">
