@@ -7,6 +7,7 @@ import { PricingTable } from "@clerk/nextjs"
 import ProductCarousel from "../components/ProductCarousel"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Contact from "@/sections/Contact"
 
 export default function Home() {
   const { isLoaded, isSignedIn } = useUser()
@@ -29,10 +30,10 @@ function AuthenticatedView() {
     <div className="flex flex-col items-center gap-6 mt-8 w-full max-w-lg">
       <UserButton afterSignOutUrl="/" />
       <div className="bg-white shadow p-6 rounded-lg text-lg text-gray-700 w-full">
-      Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.
-      
-      
-      Authenticated content: {messages?.length ?? 0}
+        Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.
+
+
+        Authenticated content: {messages?.length ?? 0}
       </div>
 
       <Card className="w-full">
@@ -40,10 +41,10 @@ function AuthenticatedView() {
           <CardTitle className="text-xl font-serif text-gray-800">Pricing & Payments</CardTitle>
         </CardHeader>
         <CardContent>
-         10 Alterations a month
+          10 Alterations a month
         </CardContent>
         <PricingTable />
-
+        <Contact />
       </Card>
     </div>
   )
@@ -61,13 +62,13 @@ function UnauthenticatedView() {
         <CardContent>
           <p className="text-gray-600 mb-6">
 
-    
-      <div className="bg-white shadow p-6 rounded-lg text-lg text-gray-700 w-full">
-      Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.
-      
-      
-      {/* Authenticated content: {messages?.length ?? 0} */}
-      </div>
+
+            <div className="bg-white shadow p-6 rounded-lg text-lg text-gray-700 w-full">
+              Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.
+
+
+              {/* Authenticated content: {messages?.length ?? 0} */}
+            </div>
             Sign up or log in to book your clothing alterations and track your orders.
           </p>
           <SignInButton mode="modal">
