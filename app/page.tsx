@@ -27,12 +27,12 @@ function AuthenticatedView() {
 
   return (
     <div className="flex flex-col items-center gap-6 mt-8 w-full max-w-lg">
-      <UserButton afterSignOutUrl="/" />
-      <div className="bg-white shadow p-6 rounded-lg text-lg text-gray-700 w-full">
-        Authenticated content: {messages?.length ?? 0}
+            <div className="bg-white shadow p-6 rounded-lg text-lg text-gray-700 w-full">
+      <h3>Grace brings elegance and care to every stitch, turning your favorite garments into perfectly fitted treasures. With a passion for detail and a love for fashion, she specializes in high-quality alterations that make every piece feel uniquely yours. From delicate hemming to custom tailoring, Grace ensures your clothes not only fit flawlessly but also make you feel confident and beautiful every time you wear them.</h3>
 
       </div>
 
+      <UserButton afterSignOutUrl="/" />
       <Card className="w-full">
         <CardHeader>
           <CardTitle className="text-xl font-serif text-gray-800">Pricing & Payments</CardTitle>
