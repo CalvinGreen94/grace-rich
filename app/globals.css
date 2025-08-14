@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent; /* Removes mobile tap flash */
+}
+
+/* Fluid typography: scales based on screen width */
+html {
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* Headings scale responsively */
+h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: bold;
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+}
+h3 {
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  font-weight: 500;
+}
+
+/* Responsive media */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 640px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Prevent horizontal scrollbars on mobile */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
