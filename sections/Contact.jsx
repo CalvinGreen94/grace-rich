@@ -1,21 +1,21 @@
 import { InlineWidget } from 'react-calendly';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Perfect Fit | Book a Session</title>
+      <Helmet>
+        <title>DeFit | Book a Session</title>
         <meta
           name="description"
-          content="Schedule a personalized clothing alteration session with Grace using Calendly. Select a convenient time to ensure your garments fit perfectly and look their best."
+          content="Schedule a personal training session with Grace through Calendly."
         />
-      </Head>
+      </Helmet>
 
       <section data-scroll-section>
         <h2>Book a Session</h2>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <InlineWidget url='https://calendly.com/lafrancdai/30min' />
+          <InlineWidget url='https://calendly.com/lafrancdai/alterations-brainstorming' />
         </div>
       </section>
     </>
